@@ -1,0 +1,32 @@
+input {
+    height: 26px;
+    border-radius: 2px;
+    border: 2px solid #90A4AE;
+    color: #78909C;
+    padding: 0 10px;
+}
+
+input[type="submit"] {
+    background: #039BE5;
+    color: #FFF;
+    font-weight: bold;
+    width: 30%;
+    align-self: flex-end;
+    border: none;
+}
+
+label {
+    font-style: italic;
+    color: #78909C;
+    font-weight: bold;
+    margin-bottom: 2px;
+    margin-top: 10px;
+}
+
+hr {
+    margin: 6px 0;
+    border-color: #FFF;
+    border-width: 2px;
+    background: #EEE;
+    margin: 6px 0;
+}
