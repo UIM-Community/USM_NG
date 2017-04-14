@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+body, html {
+    height: 100vh;
+    font-family: calibri;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d3d3d3+0,ffffff+100 */
+    background: rgb(211,211,211); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(211,211,211,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(211,211,211,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  rgba(211,211,211,1) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+    body > form#login_form {
+        width: 350px;
+        background: #EEE;
+        border: 2px solid #FFF;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 1px 1px 10px #CCC;
+    }
+    body h1 {
+        color: #455A64;
+    }
+    body span {
+        color: #388E3C;
+        font-weight: bold;
+        font-style: italic;
+        line-height: 0.2;
+    }
