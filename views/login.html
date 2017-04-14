@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 USM</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/input.css">
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            var form = document.forms.namedItem('f_login');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                var user        = document.getElementById('f_user');
+                var password    = document.getElementById('f_password');
+
+                var headers = new Headers({
+                    "Content-Type": "application/json",
+                    "Content-Accept": "application/json"
+                }); 
+
+                fetch('/auth',{
+                    method: 'POST',
+                    headers,
+                    body: JSON.stringify({
+                        user: user.value,
+                        password: password.value
+                    })
+                }).then( res => {
+                    window.alert('res ok');
+                    console.log(res);
+                })
+                .catch( err => {
+                    throw err;
+                });
+                console.log(user.value,password.value);
+            });
+        });
+    </script>
+</head>
+    <body>
+        <form id="login_form" method="POST" name="f_login">
+            <h1>Authentification</h1> 
+            <span>USM NG</span>
+            <label for="user">Account</label>
+            <input type="text" name="user" id="f_user" maxlength="20" required />
+            <label for="password">Password</label> 
+            <input type="password" name="password" id="f_password" required />
+            <hr />
+            <input type="submit" name="submit" value="sign-in" />
+        </form>
+    </body>
+</html>
